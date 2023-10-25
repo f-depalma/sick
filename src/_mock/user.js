@@ -5,11 +5,11 @@ import { faker } from '@faker-js/faker';
 
 export const users = [...Array(24)].map((_, index) => ({
   id: faker.string.uuid(),
-  avatarUrl: `/assets/images/avatars/avatar_${index + 1}.jpg`,
-  name: faker.person.fullName(),
-  company: faker.company.name(),
+  avatarUrl: `/assets/images/avatars/avatar_${0}.jpg`,
+  name: sample(['Machine1']),
+  company: sample(['Hall 4, Booth 4.1']),
   isVerified: faker.datatype.boolean(),
-  status: sample(['active', 'banned']),
+  status: sample(['Info', 'Warning', 'Error']),
   role: sample([
     'Leader',
     'Hr Manager',

@@ -122,12 +122,12 @@ export default function UserPage() {
                 onRequestSort={handleSort}
                 onSelectAllClick={handleSelectAllClick}
                 headLabel={[
-                  { id: 'name', label: 'Name' },
-                  { id: 'company', label: 'Company' },
-                  { id: 'role', label: 'Role' },
-                  { id: 'isVerified', label: 'Verified', align: 'center' },
-                  { id: 'status', label: 'Status' },
+                  { id: 'machine', label: 'Machine' },
+                  { id: 'position', label: 'Position' },
                   { id: '' },
+                  { id: 'status', label: 'Status' },
+                  { id: 'gravity', label: 'Gravity' },
+                  { id: 'timeStamp', label: 'TimeStamp', align: 'center' },
                 ]}
               />
               <TableBody>
