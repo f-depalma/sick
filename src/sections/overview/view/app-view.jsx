@@ -6,6 +6,8 @@ import Typography from '@mui/material/Typography';
 
 import Iconify from 'src/components/iconify';
 
+import { UserView } from 'src/sections/user/view';
+
 import AppOrderTimeline from '../app-order-timeline';
 import AppCurrentVisits from '../app-current-visits';
 import AppWebsiteVisits from '../app-website-visits';
@@ -34,8 +36,8 @@ export default function AppView() {
 
         <Grid xs={12} sm={6} md={3}>
           <AppWidgetSummary
-            title="Availability"
-            total={1352831}
+            title="% Availability"
+            total="87%"
             color="info"
             icon={<img alt="icon" src="/assets/icons/glass/ic_glass_users.png" />}
           />
@@ -43,8 +45,8 @@ export default function AppView() {
 
         <Grid xs={12} sm={6} md={3}>
           <AppWidgetSummary
-            title="Performance"
-            total={1723315}
+            title="% Performance"
+            total="98%"
             color="warning"
             icon={<img alt="icon" src="/assets/icons/glass/ic_glass_buy.png" />}
           />
@@ -52,8 +54,8 @@ export default function AppView() {
 
         <Grid xs={12} sm={6} md={3}>
           <AppWidgetSummary
-            title="Quality"
-            total={234}
+            title="% Quality"
+            total="78%"
             color="error"
             icon={<img alt="icon" src="/assets/icons/glass/ic_glass_message.png" />}
           />
@@ -155,18 +157,16 @@ export default function AppView() {
           />
         </Grid>
 
+        <Grid lg={8} xs={12}>
+          <UserView />
+        </Grid>
+
         <Grid xs={12} md={6} lg={4}>
           <AppOrderTimeline
-            title="Order Timeline"
-            list={[...Array(5)].map((_, index) => ({
+            title="Production timeline"
+            list={[...Array(3)].map((_, index) => ({
               id: faker.string.uuid(),
-              title: [
-                '1983, orders, $4220',
-                '12 Invoices have been paid',
-                'Order #37745 from September',
-                'New order placed #XF-2356',
-                'New order placed #XF-2346',
-              ][index],
+              title: ['Batch X', 'Batch Y', 'Batch Z'][index],
               type: `order${index + 1}`,
               time: faker.date.past(),
             }))}
