@@ -23,7 +23,7 @@ export default function AppView() {
   useEffect(() => {
     const intervalId = setInterval(() => {
       const copy = {
-        total_time: (Date.now() / 1000).toFixed(0) - 1698281007, // 1698314400,
+        total_time: (Date.now() / 1000).toFixed(0) - 1698300000, // 1698314400,
         prod_piece: variables.total_time * 4,
         defected: Number((variables.total_time / 2).toFixed(0)),
         complaiant: variables.prod_piece - variables.defected,
