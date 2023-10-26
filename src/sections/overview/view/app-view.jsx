@@ -258,10 +258,6 @@ export default function AppView() {
               ]}
             />
           </Grid>
-          <Grid lg={8} xs={12} height="50vh">
-          {/* <iframe src="PigeonPost.pdf" title='PDFs' width="100%" height="100%" border="none"/> */}
-          <object data="PigeonPost.pdf" type="application/pdf" style={{minHeight: '51vh'}} width="100%" aria-label="pdf" />
-          </Grid>
         </Grid>
       ) : (
         <>
