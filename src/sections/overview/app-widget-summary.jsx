@@ -26,7 +26,9 @@ export default function AppWidgetSummary({ title, total, icon, color = 'primary'
       {icon && <Box sx={{ width: 64, height: 64 }}>{icon}</Box>}
 
       <Stack spacing={0.5}>
-        <Typography variant="h4">{fShortenNumber(total)}</Typography>
+        <Typography variant="h4">
+          {typeof total === 'number' ? fShortenNumber(total) : total}
+        </Typography>
 
         <Typography variant="subtitle2" sx={{ color: 'text.disabled' }}>
           {title}
@@ -41,5 +43,5 @@ AppWidgetSummary.propTypes = {
   icon: PropTypes.oneOfType([PropTypes.element, PropTypes.string]),
   sx: PropTypes.object,
   title: PropTypes.string,
-  total: PropTypes.number,
+  total: PropTypes.number || PropTypes.string,
 };

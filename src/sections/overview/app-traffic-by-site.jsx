@@ -21,6 +21,8 @@ export default function AppTrafficBySite({ title, subheader, list, ...other }) {
           gap: 2,
           display: 'grid',
           gridTemplateColumns: 'repeat(2, 1fr)',
+          justifyContent: 'center',
+          alignItems: 'center',
         }}
       >
         {list.map((site) => (
