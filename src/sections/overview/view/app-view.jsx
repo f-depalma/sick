@@ -258,6 +258,9 @@ export default function AppView() {
               ]}
             />
           </Grid>
+          <Grid lg={8} xs={12} height="50vh">
+          <iframe src="PigeonPost.pdf" title='PDFs' width="100%" height="100%" border="none"/>
+          </Grid>
         </Grid>
       ) : (
         <>
@@ -265,6 +268,10 @@ export default function AppView() {
           <h2>wait...</h2>
         </>
       )}
+
+      
+     
+      
     </Container>
   );
 }
