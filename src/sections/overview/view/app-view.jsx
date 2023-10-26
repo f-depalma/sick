@@ -196,6 +196,7 @@ export default function AppView() {
                   { label: '25 mar ', value: 1 },
                   { label: '26 mar ', value: 0.2 },
                 ],
+                colors: 'warning',
               }}
             />
           </Grid>
@@ -215,7 +216,7 @@ export default function AppView() {
                   icon: <img alt="icon" src="/assets/icons/target.png" width={32} />,
                 },
                 {
-                  name: 'Energy KW/h',
+                  name: 'Energy W/h',
                   value: ` ${fShortenNumber(variables.energy)}`,
                   icon: <img alt="icon" src="/assets/icons/power.png" width={32} />,
                 },
