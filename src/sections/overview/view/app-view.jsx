@@ -4,8 +4,6 @@ import Container from '@mui/material/Container';
 import Grid from '@mui/material/Unstable_Grid2';
 import Typography from '@mui/material/Typography';
 
-import Iconify from 'src/components/iconify';
-
 import { UserView } from 'src/sections/user/view';
 
 import AppOrderTimeline from '../app-order-timeline';
@@ -30,7 +28,7 @@ export default function AppView() {
             title="Piece produced"
             total={4244}
             color="success"
-            icon={<img alt="icon" src="/assets/icons/glass/ic_glass_bag.png" />}
+            icon={<img alt="icon" src="/assets/icons/timeline.png" />}
           />
         </Grid>
 
@@ -39,7 +37,7 @@ export default function AppView() {
             title="% Availability"
             total="87%"
             color="info"
-            icon={<img alt="icon" src="/assets/icons/glass/ic_glass_users.png" />}
+            icon={<img alt="icon" src="/assets/icons/24-hours.png" />}
           />
         </Grid>
 
@@ -48,7 +46,7 @@ export default function AppView() {
             title="% Performance"
             total="98%"
             color="warning"
-            icon={<img alt="icon" src="/assets/icons/glass/ic_glass_buy.png" />}
+            icon={<img alt="icon" src="/assets/icons/growth.png" />}
           />
         </Grid>
 
@@ -57,7 +55,7 @@ export default function AppView() {
             title="% Quality"
             total="78%"
             color="error"
-            icon={<img alt="icon" src="/assets/icons/glass/ic_glass_message.png" />}
+            icon={<img alt="icon" src="/assets/icons/quality-assurance.png" />}
           />
         </Grid>
 
@@ -136,22 +134,27 @@ export default function AppView() {
 
         <Grid xs={12} md={6} lg={4}>
           <AppTrafficBySite
-            title="Productivity"
+            title="Production"
             list={[
               {
                 name: 'Count',
                 value: 323234,
-                icon: <Iconify icon="eva:facebook-fill" color="#1877F2" width={32} />,
+                icon: <img alt="icon" src="/assets/icons/counter.png" width={32} />,
               },
               {
                 name: 'Target',
                 value: 341212,
-                icon: <Iconify icon="eva:google-fill" color="#DF3E30" width={32} />,
+                icon: <img alt="icon" src="/assets/icons/target.png" width={32} />,
               },
               {
-                name: 'Performance',
+                name: 'Energy',
                 value: 411213,
-                icon: <Iconify icon="eva:linkedin-fill" color="#006097" width={32} />,
+                icon: <img alt="icon" src="/assets/icons/power.png" width={32} />,
+              },
+              {
+                name: '% to goal',
+                value: '87 %',
+                icon: <img alt="icon" src="/assets/icons/business-plan.png" width={32} />,
               },
             ]}
           />
